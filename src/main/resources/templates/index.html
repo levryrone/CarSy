@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+        <title>CarSy | Garage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav class="menu">
+                <ul class="main-menu">
+                    <li class="active"><a href="#">Garage</a></li>
+                    <li sec:authorize="isAuthenticated()"><a href="#">Favorites</a></li>
+                    <li sec:authorize="!isAuthenticated()"><a href="#">LogIn</a></li>
+                    <li sec:authorize="!isAuthenticated()"><a href="#">Register</a></li>
+                    <li sec:authorize="isAuthenticated()"><a href="#"></a></li>
+                </ul>
+            </nav>
+            <article>
+                <h1>See all cars below</h1>
+                <div class="car-card">
+                    Mercedes GLA
+                </div>
+                <div class="car-card">
+                    Audi Q5
+                </div>
+                <div class="car-card">
+                    BMW-600
+                </div>
+                <div class="car-card">
+                    Seat 202
+                </div>
+            </article>
+        </div>
+    </body>
+</html>
